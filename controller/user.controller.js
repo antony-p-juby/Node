@@ -1,5 +1,4 @@
 const UserService=require('../services/user.services');
-const user=require('../model/user.model');
 
 exports.register=async(req,res,next)=>{
     try{
