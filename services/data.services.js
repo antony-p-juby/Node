@@ -9,6 +9,15 @@ class DataService{
             throw err;
         }
     }
+    static async checkdata(data){
+    try{
+        return await DataModel.findOne({data});
+
+    }
+    catch(err){
+        throw err;
+    }
+}
 
 
 

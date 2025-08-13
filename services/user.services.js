@@ -12,7 +12,7 @@ class UserService{
     }
 
 
-    static async checkuser(email,password){
+    static async checkuser(email){
         try{
             return await UserModel.findOne({email});
 
