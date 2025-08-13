@@ -1,6 +1,6 @@
 const DataModel=require('../model/data.model');
 class DataService{
-    static async scannedData(data,date){
+    static async scannedData(data){
         try{
             const createData=new DataModel({data});
             return await createData.save();
