@@ -2,7 +2,7 @@ const DataService=require('../services/data.services');
 
 exports.scandata=async(req,res,next)=>{
     try{
-        const {data,date}=req.body;
+        const {data}=req.body;
         let responseData=await DataService.scannedData(data);
         res.json({status:true,success:responseData});
 
