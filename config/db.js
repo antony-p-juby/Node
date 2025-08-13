@@ -1,8 +1,8 @@
-const mongoose=require('mongoose');
-const connection = mongoose.createConnection('mongodb://127.0.0.1:27017/Data').on('open',()=>{
-    console.log('Mongo connected');
-}).on('error',()=>{
-    console.log('Connection error');
-});
+require('dotenv').config();
+const mongoose = require('mongoose');
 
-module.exports=connection;
+const connection = mongoose.createConnection(process.env.MONGO_URI)
+  .on('open', () => console.log('MongoDB Atlas connected'))
+  .on('error', (err) => console.error('Connection error:', err));
+
+module.exports = connection;
