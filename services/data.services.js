@@ -9,16 +9,14 @@ class DataService{
             throw err;
         }
     }
-    static async checkdata(data){
-    try{
-        return await DataModel.findOne({data});
 
-    }
-    catch(err){
+    static async getAllData() {
+    try {
+        return await DataModel.find().lean(); 
+    } catch (err) {
         throw err;
     }
-}
-
+    }
 
 
 }
